@@ -1,0 +1,110 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+}
+h1 { margin-bottom: 20px; }
+#content p { margin-bottom: 15px; font-size: 1.1em; }
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.color-button {
+  width: 90px;
+  height: 90px;
+  border: none;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.color-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.final-color {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  transition: background 0.4s ease, transform 0.4s ease;
+  margin: 10px;
+}
+button:hover {
+  background: #555;
+  transform: scale(1.02);
+}
+/* Color box styling */
+#colorPickerContainer { margin-bottom: 15px; }
+#hueSlider {
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  height: 15px;
+  border-radius: 5px;
+  background: linear-gradient(to right, red, yellow, lime, cyan, blue, magenta, red);
+}
+#hueSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+#colorBox { cursor: crosshair; border: 1px solid #ccc; border-radius: 5px; }
+/* Progress Bar */
+#progress-container {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  height: 20px;
+}
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+/* Fade animations */
+.fade { opacity: 1; transition: opacity 1s ease-in-out; }
+.fade-out { opacity: 0; }
+/* Hidden canvas for share image */
+#shareCanvas { display: none; }
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .container { padding: 15px 20px; }
+  #hueSlider { width: 100%; }
+}
